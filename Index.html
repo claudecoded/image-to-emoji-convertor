@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Emoji Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing p5.js library for image processing -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image to Emoji Converter 🖼️➡️📝</h1>
+        <p>Upload an image to convert it into copyable text emojis.</p>
+        
+        <div class="upload-section">
+            <input type="file" id="file-input" accept="image/*">
+            <div class="controls">
+                <label for="resolution-slider">Resolution (Width in Emojis): <span id="res-val">30</span></label>
+                <input type="range" id="resolution-slider" min="10" max="60" value="30">
+            </div>
+        </div>
+
+        <div class="output-section">
+            <button id="copy-btn" disabled>Copy Emojis</button>
+            <pre id="emoji-output">Your output will appear here...</pre>
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
